@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import {
+  signInWithGooglePopup,
+  signInAuthUser,
+} from "../../utils/firebase/firebase";
+
 import "./auth-form.css";
 
 const defaultFormFields = {
@@ -16,6 +21,10 @@ const AuthForm = () => {
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
+  };
+
+  const signInWithGoogle = async () => {
+    await signInWithGooglePopup();
   };
 
   const handleSubmit = (event) => {
@@ -93,7 +102,11 @@ const AuthForm = () => {
         </button>
         <hr className="form-divider" />
         <p className="or">OR</p>
-        <button type="button" className="form-btn google-btn">
+        <button
+          type="button"
+          className="form-btn google-btn"
+          onClick={signInWithGoogle}
+        >
           Login with Google
         </button>
         <p className="form-question">
