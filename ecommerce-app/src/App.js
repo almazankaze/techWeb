@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Navigation from "./components/navigation/Navigation";
+import NavigateAuth from "./routes/authentication/NavigateAuth";
 import Home from "./routes/home/Home";
 import Authentication from "./routes/authentication/Authentication";
 
@@ -32,7 +33,14 @@ function App() {
     <Routes>
       <Route path="/" element={<Navigation />}>
         <Route index element={<Home />} />
-        <Route path="auth" element={<Authentication />} />
+        <Route
+          path="auth"
+          element={
+            <NavigateAuth>
+              <Authentication />
+            </NavigateAuth>
+          }
+        />
       </Route>
     </Routes>
   );

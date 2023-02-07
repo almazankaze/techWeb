@@ -1,10 +1,16 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Spinner from "../spinner/Spinner";
 
 import {
   signInWithGooglePopup,
   signInAuthUser,
+  createAuthUser,
+  createUserDoc,
 } from "../../utils/firebase/firebase";
+
+import { getEmailFragments } from "../../utils/functions/getEmailFragments";
+import { isEmail } from "../../utils/functions/isEmail";
 
 import "./auth-form.css";
 
@@ -18,6 +24,9 @@ const AuthForm = () => {
   const [isSignup, setIsSignUp] = useState(false);
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password, confirmPassword } = formFields;
+  const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -27,12 +36,61 @@ const AuthForm = () => {
     await signInWithGooglePopup();
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    console.log(email);
+    if (isSignup) {
+      if (!isEmail(email)) {
+        alert("not a valid email");
+        return;
+      }
+      if (password !== confirmPassword) {
+        alert("passwords do not match");
+        return;
+      }
 
-    resetFormFields();
+      setLoading(true);
+
+      try {
+        const { user } = await createAuthUser(email, password);
+
+        const [displayName, domain] = getEmailFragments(email);
+
+        await createUserDoc(user, { displayName });
+
+        resetFormFields();
+        navigate(0);
+        setLoading(false);
+      } catch (err) {
+        if (err.code === "auth/email-already-in-use") {
+          alert("Email already in use");
+        } else {
+          console.log(err);
+        }
+
+        setLoading(false);
+      }
+    } else {
+      setLoading(true);
+      try {
+        await signInAuthUser(email, password);
+
+        resetFormFields();
+        setLoading(false);
+      } catch (err) {
+        switch (err.code) {
+          case "auth/wrong-password":
+            alert("incorrect password for email");
+            break;
+          case "auth/user-not-found":
+            alert("no user associated with this email");
+            break;
+          default:
+            console.log(err);
+        }
+        setLoading(false);
+      }
+    }
   };
 
   const handleChange = (event) => {
@@ -44,7 +102,9 @@ const AuthForm = () => {
   const switchMode = () => {
     setIsSignUp((prevIsSignUp) => !prevIsSignUp);
   };
-  return (
+  return loading ? (
+    <Spinner />
+  ) : (
     <div className="form-container">
       <form autoComplete="off" noValidate onSubmit={handleSubmit}>
         <div className="form-input">
