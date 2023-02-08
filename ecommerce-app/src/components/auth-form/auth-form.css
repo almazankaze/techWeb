@@ -137,6 +137,15 @@ form .form-input {
   margin-left: 0.25rem;
 }
 
+.input-error {
+  color: var(--error);
+  font-size: 0.813rem;
+}
+
+.last-error {
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 600px) {
   .form-container {
     width: 420px;
