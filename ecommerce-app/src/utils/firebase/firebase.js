@@ -51,7 +51,7 @@ export const addCollectionAndDocuments = async (
   const collectionRef = collection(db, collectionKey);
 
   objectsToAdd.forEach((object) => {
-    const docRef = doc(collectionRef, object.title.toLowerCase());
+    const docRef = doc(collectionRef);
     batch.set(docRef, object);
   });
 
@@ -59,8 +59,8 @@ export const addCollectionAndDocuments = async (
   console.log("done");
 };
 
-export const getCategoriesAndDocuments = async () => {
-  const collectionRef = collection(db, "categories");
+export const getProductsAndDocuments = async () => {
+  const collectionRef = collection(db, "storeItems");
   const q = query(collectionRef);
 
   const querySnapshot = await getDocs(q);

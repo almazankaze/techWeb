@@ -166,7 +166,7 @@ const SHOP_DATA = [
   },
   {
     id: 16,
-    name: "LG - 32" IPS LED QHD FreeSync Monitor with HDR (HDMI, DisplayPort)",
+    name: "LG - 32 IPS LED QHD FreeSync Monitor with HDR (HDMI, DisplayPort)",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
     img: "",
     dprice: "199.99",
@@ -175,7 +175,7 @@ const SHOP_DATA = [
     rating: 5,
     inStock: true,
   },
-    {
+  {
     id: 17,
     name: "CORSAIR - RMx Series RM850x 80 PLUS Gold Fully Modular ATX Power Supply",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
@@ -186,7 +186,7 @@ const SHOP_DATA = [
     rating: 4.5,
     inStock: true,
   },
-    {
+  {
     id: 18,
     name: "WD - Blue 4TB Internal SATA Hard Drive for Desktops",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
@@ -197,9 +197,9 @@ const SHOP_DATA = [
     rating: 5,
     inStock: true,
   },
-    {
+  {
     id: 19,
-    name: "Samsung - Galaxy Book Go - 14.0" LED Screen - Qualcomm® Snapdragon™ 7C Gen 2 Processor - 4GB Memory - 128GB eMMC",
+    name: "Samsung - Galaxy Book Go - 14.0 LED Screen - Qualcomm® Snapdragon™ 7C Gen 2 Processor - 4GB Memory - 128GB eMMC",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
     img: "",
     dprice: "309.99",
@@ -208,7 +208,7 @@ const SHOP_DATA = [
     rating: 4,
     inStock: true,
   },
-    {
+  {
     id: 20,
     name: "WD - Blue SN570 1TB Internal SSD PCIe Gen 3 x4",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",

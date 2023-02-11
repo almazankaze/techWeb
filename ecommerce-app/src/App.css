@@ -1,5 +1,5 @@
 :root {
-  --main-color: #005ecb;
+  --main-color: #2457aa;
   --secondary-color: green;
   --white: #fff;
   --gray-100: #f8f9fa;
@@ -44,4 +44,10 @@ body {
 .btn:hover {
   color: #fff;
   background: #222;
+}
+
+.align-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

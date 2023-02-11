@@ -6,16 +6,23 @@ import NavigateAuth from "./routes/authentication/NavigateAuth";
 import Home from "./routes/home/Home";
 import Authentication from "./routes/authentication/Authentication";
 
+import SHOP_DATA from "./shop-data";
+
 import { setCurrentUser } from "./store/user/user-actions";
 import {
   onAuthStateChangedListener,
   createUserDoc,
+  addCollectionAndDocuments,
 } from "./utils/firebase/firebase";
 
 import "./App.css";
 
 function App() {
   const dispatch = useDispatch();
+
+  /* useEffect(() => {
+    addCollectionAndDocuments("storeItems", SHOP_DATA);
+  }, []); */
 
   useEffect(() => {
     const unsubscribe = onAuthStateChangedListener((user) => {
