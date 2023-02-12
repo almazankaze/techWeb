@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import Navigation from "./components/navigation/Navigation";
 import NavigateAuth from "./routes/authentication/NavigateAuth";
 import Home from "./routes/home/Home";
+import Footer from "./components/footer/Footer";
 import Authentication from "./routes/authentication/Authentication";
 
 import SHOP_DATA from "./shop-data";
@@ -37,19 +38,22 @@ function App() {
   }, [dispatch]);
 
   return (
-    <Routes>
-      <Route path="/" element={<Navigation />}>
-        <Route index element={<Home />} />
-        <Route
-          path="auth"
-          element={
-            <NavigateAuth>
-              <Authentication />
-            </NavigateAuth>
-          }
-        />
-      </Route>
-    </Routes>
+    <div>
+      <Routes>
+        <Route path="/" element={<Navigation />}>
+          <Route index element={<Home />} />
+          <Route
+            path="auth"
+            element={
+              <NavigateAuth>
+                <Authentication />
+              </NavigateAuth>
+            }
+          />
+        </Route>
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 

@@ -2,6 +2,15 @@ import { Link } from "react-router-dom";
 
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
+import processors from "../../img/components/processors.jpg";
+import cases from "../../img/components/computer_case.jpg";
+import hardDrives from "../../img/components/hard_drives.jpg";
+import motherboards from "../../img/components/motherboards.jpg";
+import power from "../../img/components/power_supplys.jpg";
+import ram from "../../img/components/rams.jpg";
+import ssd from "../../img/components/ssd_disk.jpg";
+import videoCards from "../../img/components/video_cards.jpg";
+
 import "./navcategories.css";
 
 const NavCategories = () => {
@@ -22,35 +31,35 @@ const NavCategories = () => {
                 <hr></hr>
                 <div className="menu-grid">
                   <div className="menu-grid-item">
-                    <img src={""} alt="motherboards"></img>
+                    <img src={motherboards} alt="motherboards"></img>
                     <p>Motherboards</p>
                   </div>
                   <div className="menu-grid-item">
-                    <img src={""} alt="processors"></img>
+                    <img src={processors} alt="processors"></img>
                     <p>Processors</p>
                   </div>
                   <div className="menu-grid-item">
-                    <img src={""} alt="ram"></img>
+                    <img src={ram} alt="ram"></img>
                     <p>RAM</p>
                   </div>
                   <div className="menu-grid-item">
-                    <img src={""} alt="video cards"></img>
+                    <img src={videoCards} alt="video cards"></img>
                     <p>Video Cards</p>
                   </div>
                   <div className="menu-grid-item">
-                    <img src={""} alt="power supplys"></img>
+                    <img src={power} alt="power supplys"></img>
                     <p>Power Supplys</p>
                   </div>
                   <div className="menu-grid-item">
-                    <img src={""} alt="hard drives"></img>
+                    <img src={hardDrives} alt="hard drives"></img>
                     <p>Hard Drives</p>
                   </div>
                   <div className="menu-grid-item">
-                    <img src={""} alt="ssd"></img>
+                    <img src={ssd} alt="ssd"></img>
                     <p>SSD</p>
                   </div>
                   <div className="menu-grid-item">
-                    <img src={""} alt="cases"></img>
+                    <img src={cases} alt="cases"></img>
                     <p>Cases</p>
                   </div>
                 </div>
