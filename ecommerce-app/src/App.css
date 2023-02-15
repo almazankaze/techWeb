@@ -28,7 +28,7 @@ body {
 .btn {
   text-transform: uppercase;
   background: transparent;
-  color: #222;
+  color: var(--black);
   padding: 0.375em 0.75em;
   margin: 1rem;
   letter-spacing: 0.1rem;
@@ -43,7 +43,13 @@ body {
 
 .btn:hover {
   color: #fff;
-  background: #222;
+  background: var(--black);
+}
+
+.link-btn {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.438rem 0.5rem;
 }
 
 .align-items {

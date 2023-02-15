@@ -1,11 +1,13 @@
 import { useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Navigation from "./components/navigation/Navigation";
 import NavigateAuth from "./routes/authentication/NavigateAuth";
 import Home from "./routes/home/Home";
 import Footer from "./components/footer/Footer";
 import Authentication from "./routes/authentication/Authentication";
+import NotFound from "./routes/errors/NotFound";
+import Cart from "./routes/cart/Cart";
 
 import SHOP_DATA from "./shop-data";
 
@@ -50,6 +52,9 @@ function App() {
               </NavigateAuth>
             }
           />
+          <Route path="cart" element={<Cart />} />
+          <Route path="*" element={<Navigate to="/notfound" />} />
+          <Route path="notfound" element={<NotFound />} />
         </Route>
       </Routes>
       <Footer />

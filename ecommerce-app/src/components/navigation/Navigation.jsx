@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import { selectCurrentUser } from "../../store/user/user-selector";
@@ -28,6 +28,12 @@ const Navigation = () => {
   const isMenuOpen = useSelector(selectIsMenuOpen);
   const isSearchOpen = useSelector(selectIsSearchOpen);
   const currentUser = useSelector(selectCurrentUser);
+
+  const navigate = useNavigate();
+
+  const goToCartHandler = () => {
+    navigate("/cart");
+  };
 
   const toggleIsMenuOpen = () => {
     dispatch(setIsSearchOpen(false));
@@ -59,7 +65,7 @@ const Navigation = () => {
               <span className="badge"> 9 </span>
             </div>
 
-            <div className="icon-container">
+            <div className="icon-container" onClick={goToCartHandler}>
               <ShoppingCartOutlinedIcon className="navbar-icon" />
               <span className="badge"> 9+ </span>
             </div>
