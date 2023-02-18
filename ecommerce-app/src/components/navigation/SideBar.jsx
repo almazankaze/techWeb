@@ -18,6 +18,7 @@ import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined
 import { selectIsMenuOpen } from "../../store/navbar/navbar-selector";
 import { setIsMenuOpen } from "../../store/navbar/navbar-actions";
 import { selectCurrentUser } from "../../store/user/user-selector";
+import { selectCartCount } from "../../store/cart/cart-selector";
 
 import "./sidebar.css";
 
@@ -28,6 +29,7 @@ const SideBar = () => {
   const [showComputers, setShowComputers] = useState(false);
   const isMenuOpen = useSelector(selectIsMenuOpen);
   const currentUser = useSelector(selectCurrentUser);
+  const cartCount = useSelector(selectCartCount);
 
   const toggleIsMenuOpen = () => dispatch(setIsMenuOpen(!isMenuOpen));
 
@@ -70,7 +72,9 @@ const SideBar = () => {
               <ShoppingCartOutlinedIcon className="sidebar-icon" /> Shopping
               Cart
             </Link>
-            <div className="side-badge">9+</div>
+            <div className="side-badge">
+              {cartCount >= 9 ? "9+" : cartCount}{" "}
+            </div>
           </div>
         </li>
         <li

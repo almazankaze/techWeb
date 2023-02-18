@@ -12,6 +12,8 @@ import {
   setIsMenuOpen,
   setIsSearchOpen,
 } from "../../store/navbar/navbar-actions";
+import { selectCartCount } from "../../store/cart/cart-selector";
+
 import SearchForm from "../search-form/SearchForm";
 import NavCategories from "./NavCategories";
 import DevicesIcon from "@mui/icons-material/Devices";
@@ -28,6 +30,7 @@ const Navigation = () => {
   const isMenuOpen = useSelector(selectIsMenuOpen);
   const isSearchOpen = useSelector(selectIsSearchOpen);
   const currentUser = useSelector(selectCurrentUser);
+  const cartCount = useSelector(selectCartCount);
 
   const navigate = useNavigate();
 
@@ -67,7 +70,10 @@ const Navigation = () => {
 
             <div className="icon-container" onClick={goToCartHandler}>
               <ShoppingCartOutlinedIcon className="navbar-icon" />
-              <span className="badge"> 9+ </span>
+              <span className="badge">
+                {" "}
+                {cartCount >= 9 ? "9+" : cartCount}{" "}
+              </span>
             </div>
             {currentUser ? (
               <div className="nav-profile-link nav-link" onClick={signOutUser}>

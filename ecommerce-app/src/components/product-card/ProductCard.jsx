@@ -1,12 +1,22 @@
+import { useDispatch, useSelector } from "react-redux";
+
+import { selectCartItems } from "../../store/cart/cart-selector";
+import { addItemToCart } from "../../store/cart/cart-actions";
 import StarReview from "../star-review/StarReview";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
+import Button, { BUTTON_TYPE_CLASSES } from "../button/Button";
 
 import "./productcard.css";
 
 function ProductCard({ product }) {
   const { name, desc, dprice, oprice, percentOff, rating, inStock, img } =
     product;
+
+  const dispatch = useDispatch();
+  const cartItems = useSelector(selectCartItems);
+
+  const addProductToCart = () => dispatch(addItemToCart(cartItems, product));
 
   return (
     <div className="card">
@@ -41,9 +51,13 @@ function ProductCard({ product }) {
           <h3>${dprice ? dprice : oprice}</h3>
           {dprice ? <p className="original-price">${oprice}</p> : ""}
         </div>
-        <button className="btn full-btn" type="button">
+        <Button
+          type="button"
+          buttonType={BUTTON_TYPE_CLASSES.cart}
+          onClick={addProductToCart}
+        >
           Add to Cart
-        </button>
+        </Button>
       </div>
     </div>
   );

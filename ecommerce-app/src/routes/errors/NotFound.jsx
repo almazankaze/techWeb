@@ -1,8 +1,15 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Button, { BUTTON_TYPE_CLASSES } from "../../components/button/Button";
 
 import "./error.css";
 
 function NotFound() {
+  const navigate = useNavigate();
+
+  const goToHomeHandler = () => {
+    navigate("/");
+  };
+
   return (
     <div className="error-container">
       <div className="error-text-container">
@@ -14,12 +21,12 @@ function NotFound() {
         </h4>
       </div>
       <div className="error-btns">
-        <Link to="/" className="btn link-btn go-home-btn">
+        <Button type="button" onClick={goToHomeHandler}>
           Return Home
-        </Link>
-        <Link to="/" className="btn link-btn report-btn">
+        </Button>
+        <Button type="button" onClick={goToHomeHandler}>
           Report Problem
-        </Link>
+        </Button>
       </div>
     </div>
   );

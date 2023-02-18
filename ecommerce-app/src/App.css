@@ -25,44 +25,10 @@ body {
   margin: auto;
 }
 
-.btn {
-  text-transform: uppercase;
-  background: transparent;
-  color: var(--black);
-  padding: 0.625em;
-  margin: 1rem;
-  letter-spacing: 0.1rem;
-  display: inline-block;
-  transition: all 0.3s linear;
-  font-size: 1rem;
-  border: 2px solid #222;
-  cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: 0.25rem;
-}
-
-.btn:hover {
-  color: #fff;
-  background: var(--black);
-}
-
-.link-btn {
-  text-decoration: none;
-  font-weight: 600;
-  padding: 0.438rem 0.5rem;
-}
-
 .align-items {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.full-btn {
-  width: 100%;
-  text-align: center;
-  font-weight: 700;
-  margin: 1rem 0;
 }
 
 .overflow-text {
@@ -81,12 +47,4 @@ body {
 
 .mb-small {
   margin-bottom: 0.5rem;
-}
-
-@media (max-width: 900px) {
-  .btn {
-    min-width: 80px;
-    font-size: 0.875rem;
-    padding: 0.5em 0;
-  }
 }

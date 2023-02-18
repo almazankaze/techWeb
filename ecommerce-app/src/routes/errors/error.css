@@ -26,21 +26,3 @@
 .error-btns {
   margin-top: 1rem;
 }
-
-.error-btns .go-home-btn {
-  color: var(--gray-200);
-  background-color: var(--main-color);
-}
-
-.error-btns .go-home-btn:hover {
-  color: var(--black);
-  background: transparent;
-}
-
-.error-btns .report-btn {
-  background: transparent;
-}
-
-.error-btns .report-btn:hover {
-  background-color: var(--main-color);
-}
