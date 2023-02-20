@@ -1,0 +1,19 @@
+.section-header {
+  margin: 3rem 0;
+}
+
+.section-header h1 {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline var(--main-color);
+  text-underline-offset: 1.4rem;
+  font-size: 1.625rem;
+  font-weight: 800;
+  color: var(--gray-800);
+}
+
+.section-header hr {
+  border: 1px solid var(--gray-400);
+  overflow: visible;
+  margin: 0;
+}

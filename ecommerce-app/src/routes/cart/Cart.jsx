@@ -1,24 +1,27 @@
+import { useSelector } from "react-redux";
+
+import { selectCartItems } from "../../store/cart/cart-selector";
+
+import CartController from "../../components/cart/CartController";
+import CartInfo from "../../components/cart/CartInfo";
 import "./cart.scss";
+import SectionHeader from "../../components/section-header/SectionHeader";
 
 const Cart = () => {
-  return (
-    <div className="cart-container">
-      <div className="cart-header">
-        <div className="header-block">
-          <span>Product</span>
-        </div>
-        <div className="header-block">
-          <span>Price</span>
-        </div>
-        <div className="header-block">
-          <span>Quantity</span>
-        </div>
-        <div className="header-block">
-          <span>Remove</span>
-        </div>
-      </div>
+  const cartItems = useSelector(selectCartItems);
 
-      <div className="total">TOTAL: $</div>
+  return (
+    <div className="container">
+      <SectionHeader sectionTitle={"Shopping Cart"} />
+
+      {cartItems.length === 0 ? (
+        <div className="cart-empty-message">Cart is Empty</div>
+      ) : (
+        <div className="cart-grid-container">
+          <CartController />
+          <CartInfo />
+        </div>
+      )}
     </div>
   );
 };

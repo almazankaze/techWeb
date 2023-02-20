@@ -10,7 +10,7 @@ import Button, { BUTTON_TYPE_CLASSES } from "../button/Button";
 import "./productcard.css";
 
 function ProductCard({ product }) {
-  const { name, desc, dprice, oprice, percentOff, rating, inStock, img } =
+  const { name, desc, dPrice, oPrice, percentOff, rating, inStock, img } =
     product;
 
   const dispatch = useDispatch();
@@ -48,8 +48,8 @@ function ProductCard({ product }) {
         <p className="card-desc overflow-text-2 mb-small">{desc}</p>
 
         <div className="card-price mb-small">
-          <h3>${dprice ? dprice : oprice}</h3>
-          {dprice ? <p className="original-price">${oprice}</p> : ""}
+          <h3>${dPrice ? dPrice : oPrice}</h3>
+          {dPrice ? <p className="original-price">${oPrice}</p> : ""}
         </div>
         <Button
           type="button"
