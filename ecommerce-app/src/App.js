@@ -8,6 +8,7 @@ import Footer from "./components/footer/Footer";
 import Authentication from "./routes/authentication/Authentication";
 import NotFound from "./routes/errors/NotFound";
 import Cart from "./routes/cart/Cart";
+import Account from "./routes/settings/Account";
 
 import SHOP_DATA from "./shop-data";
 
@@ -53,6 +54,7 @@ function App() {
             }
           />
           <Route path="cart" element={<Cart />} />
+          <Route path="account" element={<Account />} />
           <Route path="*" element={<Navigate to="/notfound" />} />
           <Route path="notfound" element={<NotFound />} />
         </Route>

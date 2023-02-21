@@ -1,0 +1,16 @@
+.settings {
+  min-height: 60vh;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.5rem;
+  padding-top: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+}

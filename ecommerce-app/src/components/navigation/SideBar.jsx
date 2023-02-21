@@ -46,7 +46,7 @@ const SideBar = () => {
         </li>
         {currentUser ? (
           <li>
-            <Link className="side-link sidebar-item" to="/">
+            <Link className="side-link sidebar-item" to="/account">
               <PermIdentityOutlinedIcon className="sidebar-icon" />{" "}
               {currentUser.displayName}
             </Link>

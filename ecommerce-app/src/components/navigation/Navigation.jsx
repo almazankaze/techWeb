@@ -3,7 +3,6 @@ import { Outlet, Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import { selectCurrentUser } from "../../store/user/user-selector";
-import { signOutUser } from "../../utils/firebase/firebase";
 import {
   selectIsMenuOpen,
   selectIsSearchOpen,
@@ -76,9 +75,9 @@ const Navigation = () => {
               </span>
             </div>
             {currentUser ? (
-              <div className="nav-profile-link nav-link" onClick={signOutUser}>
+              <Link className="nav-profile-link nav-link" to="/account">
                 {currentUser.displayName}
-              </div>
+              </Link>
             ) : (
               <div className="nav-profile-link">
                 <Link className="nav-link" to="/auth">

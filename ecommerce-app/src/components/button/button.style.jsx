@@ -17,11 +17,21 @@ export const BaseButton = styled.button`
     color: var(--white);
     background: var(--black);
   }
+`;
 
-  @media (max-width: 900px) {
-    min-width: 80px;
-    font-size: 0.875rem;
-    padding: 0.5em 0;
+export const FullButton = styled(BaseButton)`
+  background-color: var(--main-color);
+  width: 100%;
+  text-align: center;
+  margin: 0.75rem 0 1.5rem;
+  border: 1px solid var(--main-color);
+  color: var(--white);
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: var(--main-color-light);
+    border: 1px solid var(--main-color-light);
+    color: var(--white);
   }
 `;
 
