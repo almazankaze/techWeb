@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Button, { BUTTON_TYPE_CLASSES } from "../../components/button/Button";
+import Button from "../../components/button/Button";
 
 import "./error.css";
 
@@ -21,10 +21,10 @@ function NotFound() {
         </h4>
       </div>
       <div className="error-btns">
-        <Button type="button" onClick={goToHomeHandler}>
+        <Button type="button" className="m-medium" onClick={goToHomeHandler}>
           Return Home
         </Button>
-        <Button type="button" onClick={goToHomeHandler}>
+        <Button type="button" className="m-medium" onClick={goToHomeHandler}>
           Report Problem
         </Button>
       </div>

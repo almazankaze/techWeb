@@ -1,45 +1,44 @@
 import styled from "styled-components";
 
 export const BaseButton = styled.button`
-  background: transparent;
-  color: var(--black);
+  background-color: var(--main-color);
+  color: var(--white);
+  min-width: 110px;
+  text-align: center;
   padding: 0.625em;
-  margin: 1rem;
+  margin: 0.75rem 0;
   display: inline-block;
   transition: all 0.3s linear;
   font-size: 1rem;
   font-weight: 700;
-  border: 1px solid var(--black);
+  border: 1px solid var(--main-color);
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: 0.25rem;
-  &:hover {
-    color: var(--white);
-    background: var(--black);
-  }
-`;
-
-export const FullButton = styled(BaseButton)`
-  background-color: var(--main-color);
-  width: 100%;
-  text-align: center;
-  margin: 0.75rem 0 1.5rem;
-  border: 1px solid var(--main-color);
-  color: var(--white);
-  text-transform: uppercase;
-
+  border-radius: 4px;
   &:hover {
     background-color: var(--main-color-light);
     border: 1px solid var(--main-color-light);
-    color: var(--white);
+  }
+
+  &.full-btn {
+    width: 100%;
+    margin: 0.75rem 0 1.5rem;
+  }
+
+  &.m-medium {
+    margin: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 0.75rem;
+    min-width: 80px;
   }
 `;
 
 export const CartButton = styled(BaseButton)`
   background-color: #ffe000;
-  width: 100%;
-  text-align: center;
-  margin: 1rem 0;
+  color: var(--black);
+  margin: 0.75rem 0;
   border: 1px solid #ffe000;
 
   &:hover {
@@ -48,3 +47,5 @@ export const CartButton = styled(BaseButton)`
     border: 1px solid #ffe000;
   }
 `;
+
+export const HeroButton = styled(CartButton)``;

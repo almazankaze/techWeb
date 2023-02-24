@@ -4,7 +4,7 @@ import LockIcon from "@mui/icons-material/Lock";
 import PersonRemoveIcon from "@mui/icons-material/PersonRemove";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-import Button, { BUTTON_TYPE_CLASSES } from "../button/Button";
+import Button from "../button/Button";
 
 import "./settings.css";
 
@@ -101,7 +101,7 @@ const MyAccount = () => {
             />
           </div>
 
-          <Button type="submit" buttonType={BUTTON_TYPE_CLASSES.fullBtn}>
+          <Button type="submit" className="full-btn">
             Save Changes
           </Button>
         </form>

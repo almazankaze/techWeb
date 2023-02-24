@@ -48,3 +48,11 @@ body {
 .mb-small {
   margin-bottom: 0.5rem;
 }
+
+.m-medium {
+  margin: 1rem;
+}
+
+.white-text {
+  color: var(--gray-100);
+}

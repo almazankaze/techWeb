@@ -2,6 +2,8 @@
 //import { useDispatch } from "react-redux";
 
 //import { fetchProductsStartAsync } from "../../store/product/product-actions";
+import HeroSection from "../../components/hero-section/HeroSection";
+import Perks from "../../components/perks/Perks";
 import ProductCard from "../../components/product-card/ProductCard";
 import air from "../../img/note_1.jpg";
 import iphoneImg from "../../img/phones/phone_2.jpg";
@@ -39,6 +41,8 @@ const Home = () => {
 
   return (
     <div className="home container">
+      <HeroSection />
+      <Perks />
       <ProductCard product={product} />
       <ProductCard product={iphone} />
     </div>

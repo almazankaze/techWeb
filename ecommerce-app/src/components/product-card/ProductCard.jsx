@@ -54,6 +54,7 @@ function ProductCard({ product }) {
         <Button
           type="button"
           buttonType={BUTTON_TYPE_CLASSES.cart}
+          className="full-btn"
           onClick={addProductToCart}
         >
           Add to Cart

@@ -1,16 +1,16 @@
-import { BaseButton, CartButton, FullButton } from "./button.style";
+import { BaseButton, CartButton, HeroButton } from "./button.style";
 
 export const BUTTON_TYPE_CLASSES = {
   base: "base",
   cart: "cart-btn",
-  fullBtn: "full-btn",
+  heroBtn: "hero-btn",
 };
 
 const getButton = (buttonType = BUTTON_TYPE_CLASSES.base) =>
   ({
     [BUTTON_TYPE_CLASSES.base]: BaseButton,
     [BUTTON_TYPE_CLASSES.cart]: CartButton,
-    [BUTTON_TYPE_CLASSES.fullBtn]: FullButton,
+    [BUTTON_TYPE_CLASSES.heroBtn]: HeroButton,
   }[buttonType]);
 
 const Button = ({ children, buttonType, ...otherProps }) => {
