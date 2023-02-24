@@ -4,8 +4,8 @@ import { selectCartItems } from "../../store/cart/cart-selector";
 
 import CartController from "../../components/cart/CartController";
 import CartInfo from "../../components/cart/CartInfo";
-import "./cart.scss";
 import SectionHeader from "../../components/section-header/SectionHeader";
+import "./cart.scss";
 
 const Cart = () => {
   const cartItems = useSelector(selectCartItems);
