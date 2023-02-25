@@ -22,7 +22,7 @@ const Perks = () => {
           <AccountBalanceWalletOutlinedIcon />
         </div>
         <div className="perk-info">
-          <h4>Money Back</h4>
+          <h4>Get Money Back</h4>
           <p className="desc-text">With a 30 day</p>
         </div>
       </div>

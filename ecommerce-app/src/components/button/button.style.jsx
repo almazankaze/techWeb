@@ -5,7 +5,7 @@ export const BaseButton = styled.button`
   color: var(--white);
   min-width: 110px;
   text-align: center;
-  padding: 0.625em;
+  padding: 0.5em;
   margin: 0.75rem 0;
   display: inline-block;
   transition: all 0.3s linear;

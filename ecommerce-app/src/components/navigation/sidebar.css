@@ -68,7 +68,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--gray-100);
+    background-color: var(--white);
     width: 30%;
     min-height: 100%;
     height: max-content;

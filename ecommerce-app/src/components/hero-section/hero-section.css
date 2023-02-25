@@ -101,9 +101,37 @@
   );
 }
 
+.container-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+.sliderDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background: var(--main-color);
+  background: rgb(32, 32, 32);
+  cursor: pointer;
+}
+.sliderDot.active-dot {
+  background: var(--main-color-light);
+}
+
 @media (max-width: 1050px) {
   .hero-section {
     height: 320px;
+  }
+
+  .container-dots {
+    display: flex;
+  }
+
+  .btn-slide {
+    display: none;
   }
 }
 

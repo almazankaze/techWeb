@@ -2,10 +2,12 @@
 //import { useDispatch } from "react-redux";
 
 //import { fetchProductsStartAsync } from "../../store/product/product-actions";
+import Button, { BUTTON_TYPE_CLASSES } from "../../components/button/Button";
 import HeroSection from "../../components/hero-section/HeroSection";
 import Perks from "../../components/perks/Perks";
 import Slider from "../../components/slider/Slider";
 import SectionHeader from "../../components/section-header/SectionHeader";
+import CategorySlider from "../../components/category-slider/CategorySlider";
 import air from "../../img/note_1.jpg";
 import iphoneImg from "../../img/phones/phone_2.jpg";
 
@@ -79,6 +81,27 @@ const Home = () => {
         <div className="img-wrapper" id="graphics"></div>
         <div className="img-wrapper" id="games"></div>
       </div>
+      <SectionHeader sectionTitle={"Laptops"} />
+      <div className="img-slider-container">
+        <div className="imageCard-container">
+          <div
+            className="imageCard-background"
+            role="img"
+            aria-label="gaming laptops"
+          >
+            <div className="imageCard-content">
+              <h2>Gaming Laptops</h2>
+              <p>Choose your laptop now!</p>
+              <Button type="button" buttonType={BUTTON_TYPE_CLASSES.heroBtn}>
+                Shop Now
+              </Button>
+            </div>
+          </div>
+        </div>
+        <Slider slides={3} resSlides={3} data={data} />
+      </div>
+      <SectionHeader sectionTitle={"Categories"} />
+      <CategorySlider />
     </div>
   );
 };

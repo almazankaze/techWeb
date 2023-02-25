@@ -18,14 +18,14 @@ const Slider = ({ slides, resSlides, data }) => {
       spaceBetween={20}
       loop={true}
       breakpoints={{
-        480: {
-          slidesPerView: 2,
+        1200: {
+          slidesPerView: slides,
         },
         850: {
           slidesPerView: resSlides,
         },
-        1200: {
-          slidesPerView: slides,
+        480: {
+          slidesPerView: 2,
         },
       }}
       autoplay={{

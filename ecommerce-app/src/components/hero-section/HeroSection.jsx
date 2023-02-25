@@ -33,6 +33,10 @@ const HeroSection = () => {
     } else setActiveImg(3);
   };
 
+  const moveDot = (img) => {
+    setActiveImg(img);
+  };
+
   return (
     <div className="hero-section">
       <div
@@ -83,6 +87,18 @@ const HeroSection = () => {
       <button type="button" className="btn-slide prev" onClick={prevSlide}>
         &#10094;
       </button>
+
+      <div className="container-dots">
+        {Array.from({ length: 3 }).map((item, index) => (
+          <div
+            key={index}
+            className={
+              activeImg === index + 1 ? "sliderDot active-dot" : "sliderDot"
+            }
+            onClick={() => moveDot(index + 1)}
+          ></div>
+        ))}
+      </div>
     </div>
   );
 };
