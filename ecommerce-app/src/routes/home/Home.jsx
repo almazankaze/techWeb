@@ -9,6 +9,8 @@ import SectionHeader from "../../components/section-header/SectionHeader";
 import air from "../../img/note_1.jpg";
 import iphoneImg from "../../img/phones/phone_2.jpg";
 
+import "./home.css";
+
 const product = {
   id: 1,
   name: "AppleMacbook Air 13",
@@ -72,6 +74,11 @@ const Home = () => {
       <Perks />
       <SectionHeader sectionTitle={"Offers"} />
       <Slider slides={4} resSlides={3} data={data} />
+
+      <div className="home-img-section">
+        <div className="img-wrapper" id="graphics"></div>
+        <div className="img-wrapper" id="games"></div>
+      </div>
     </div>
   );
 };
