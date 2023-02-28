@@ -235,6 +235,19 @@ const SHOP_DATA = [
     inStock: true,
     home: "offer"
   },
+  {
+    id: 19,
+    name: "Lenovo Legion 7 16 WQXGA Gaming Laptop NVIDIA GeForce RTX 3080 AMD Ryzen 9-5900HX 32GB Ram 1TB SSD",
+    shortname: "Lenovo Legion 7 Gaming Laptop",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
+    img: "",
+    dprice: "1799.99",
+    oprice: "1799.99",
+    percentOff: "",
+    rating: 4,
+    inStock: false,
+    home: "laptop"
+  },
 ];
 
 export default SHOP_DATA;
