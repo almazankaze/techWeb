@@ -2,6 +2,7 @@ const SHOP_DATA = [
   {
     id: 1,
     name: "MacBook Pro 16 Laptop - Apple M1 Pro chip - 16GB Memory - 1TB SSD - Space Gray",
+    shortname: "MacBook Pro 16 Laptop",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
     img: "",
     dprice: "2,299.00",
@@ -9,10 +10,12 @@ const SHOP_DATA = [
     percentOff: 15,
     rating: 5,
     inStock: true,
+    home: "offer"
   },
   {
     id: 2,
     name: "Fire Emblem Engage - Nintendo Switch, Nintendo Switch (OLED Model), Nintendo Switch Lite",
+    shortname: "Fire Emblem Engage",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
     img: "",
     dprice: "59.99",
@@ -20,10 +23,12 @@ const SHOP_DATA = [
     percentOff: "",
     rating: 5,
     inStock: true,
+    home: ""
   },
   {
     id: 3,
     name: "Nintendo - Switch – OLED Model w/ White Joy-Con - White",
+    shortname: "Nintendo Switch",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
     img: "",
     dprice: "349.99",
@@ -31,21 +36,25 @@ const SHOP_DATA = [
     percentOff: "",
     rating: 5,
     inStock: true,
+    home: ""
   },
   {
     id: 4,
     name: "CORSAIR - VENGEANCE PRO 32GB (2PK x 16GB) 3600MHz DDR4 C18 DIMM Desktop Memory with RGB lighting",
+    shortname: "Corsair Vengeance Pro 32GB",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
     img: "",
-    dprice: "99.99",
+    dprice: "89.99",
     oprice: "99.99",
-    percentOff: "",
+    percentOff: 10,
     rating: 4.5,
     inStock: true,
+    home: "offer"
   },
   {
     id: 5,
     name: "Sony - PlayStation 5 Console",
+    shortname: "Sony Playstation 5",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
     img: "",
     dprice: "499.99",
@@ -53,11 +62,13 @@ const SHOP_DATA = [
     percentOff: "",
     rating: 5,
     inStock: false,
+    home: ""
   },
   
   {
     id: 6,
     name: "AMD - Ryzen 7 5800X 4th Gen 8-core, 16-threads Unlocked Desktop Processor Without Cooler",
+    shortname: "AMD Ryzen 7 5800X",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
     img: "",
     dprice: "249.00",
@@ -65,21 +76,25 @@ const SHOP_DATA = [
     percentOff: 45,
     rating: 4.5,
     inStock: true,
+    home: "offer"
   },
   {
     id: 7,
     name: "Logitech - G203 LIGHTSYNC Wired Optical Gaming Mouse with 8,000 DPI sensor - Black",
+    shortname: "Logitech Wired Gaming Mouse",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
     img: "",
     dprice: "37.00",
     oprice: "50.00",
     percentOff: 25,
-    rating: 3.5,
+    rating: 3,
     inStock: true,
+    home: "offer"
   },
   {
     id: 8,
     name: "Samsung - Galaxy S23 Ultra 256GB (Unlocked) - Phantom Black",
+    shortname: "Samsung Galaxy S23 Ultra 256GB",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
     img: "",
     dprice: "1,199.99",
@@ -87,10 +102,12 @@ const SHOP_DATA = [
     percentOff: "",
     rating: 5,
     inStock: true,
+    home: ""
   },
   {
     id: 9,
     name: "Apple - iPhone 14 Pro Max 128GB - Space Black",
+    shortname: "Apple iPhone 14 Pro Max 128GB",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
     img: "",
     dprice: "1,099.99",
@@ -98,10 +115,12 @@ const SHOP_DATA = [
     percentOff: "",
     rating: 5,
     inStock: false,
+    home: ""
   },
   {
     id: 10,
     name: "LG - UltraGear 32 IPS LED QHD G-SYNC Compatible and AMD FreeSync Premium Pro Monitor with HDR (HDMI, DisplayPort)",
+    shortname: "LG UltraGear 32 Monitor",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
     img: "",
     dprice: "449.99",
@@ -109,10 +128,12 @@ const SHOP_DATA = [
     percentOff: 25,
     rating: 5,
     inStock: true,
+    home: "offer"
   },
   {
     id: 11,
     name: "CORSAIR - RMx Series RM850x 80 PLUS Gold Fully Modular ATX Power Supply",
+    shortname: "Corsair RMx Series Power Supply",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
     img: "",
     dprice: "135.99",
@@ -120,10 +141,12 @@ const SHOP_DATA = [
     percentOff: 10,
     rating: 4.5,
     inStock: true,
+    home: "offer"
   },
   {
     id: 12,
     name: "WD - Blue 4TB Internal SATA Hard Drive for Desktops",
+    shortname: "WD 4TB SATA Hard Drive",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
     img: "",
     dprice: "72.00",
@@ -131,11 +154,13 @@ const SHOP_DATA = [
     percentOff: 20,
     rating: 5,
     inStock: true,
+    home: "offer"
   },
   
   {
     id: 13,
     name: "Alienware - m17 R5 17.3 360Hz FHD Gaming Laptop - AMD Ryzen 9 - 16GB Memory - NVIDIA GeForce RTX 3070 Ti - 1TB SSD",
+    shortname: "Alienware m17 Gaming Laptop",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
     img: "",
     dprice: "1,899.99",
@@ -143,21 +168,25 @@ const SHOP_DATA = [
     percentOff: 18,
     rating: 5,
     inStock: true,
+    home: "laptop"
   },
   {
     id: 14,
     name: "ASUS TUF Dash F15 15.6 144Hz (Intel 12th Gen i7-12650H, 32GB DDR5 RAM, 1TB PlCe SSD, Geforce RTX 3070 8GB) Thin Bezel IPS Gaming Laptop",
+    shortname: "ASUS TUF Dash Gaming Laptop",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
     img: "",
     dprice: "1,599.99",
     oprice: "1,599.99",
     percentOff: "",
-    rating: 5,
+    rating: 4,
     inStock: true,
+    home: "laptop"
   },
   {
     id: 15,
     name: "MSI GE76 Raider Gaming Laptop 17.3 FHD IPS 144Hz 12th Gen Intel 14-core i9-12900H 16GB RAM 2TB SSD GeForce RTX 3060",
+    shortname: "MSI GE76 Raider Gaming Laptop",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
     img: "",
     dprice: "1,999.00",
@@ -165,6 +194,46 @@ const SHOP_DATA = [
     percentOff: "",
     rating: 5,
     inStock: true,
+    home: "laptop"
+  },
+  {
+    id: 16,
+    name: "ASUS ROG Strix Scar 15 Gaming Laptop, 15.6” 240Hz IPS QHD Display, NVIDIA GeForce RTX 3070 Ti, Intel Core i9 12900H, 16GB DDR5, 1TB SSD",
+    shortname: "ASUS ROG Strix Scar 15 Gaming Laptop",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
+    img: "",
+    dprice: "2049.99",
+    oprice: "2049.99",
+    percentOff: "",
+    rating: 5,
+    inStock: true,
+    home: "laptop"
+  },
+  {
+    id: 17,
+    name: "MSI Pulse GL66 15.6 FHD 144Hz Gaming Laptop: Intel Core i7-12700H RTX 3070 16GB 512GB NVMe SSD",
+    shortname: "MSI Pulse Gaming Laptop",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
+    img: "",
+    dprice: "1280.99",
+    oprice: "1599.99",
+    percentOff: 20,
+    rating: 4,
+    inStock: true,
+    home: "laptop"
+  },
+  {
+    id: 18,
+    name: "NVIDIA GeForce RTX 4090 Founders Edition Graphics Card 24GB GDDR6X - Titanium and Black",
+    shortname: "NVIDIA GeForce RTX 4090 Graphics Card",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
+    img: "",
+    dprice: "2150.99",
+    oprice: "2499.99",
+    percentOff: 15,
+    rating: 4,
+    inStock: true,
+    home: "offer"
   },
 ];
 
