@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import banner1 from "../../img/hero/hero-1.jpg";
 import banner2 from "../../img/hero/hero-2.jpg";
-//import banner3 from "../../img/hero/hero-3.jpg";
+import banner3 from "../../img/hero/hero-3.jpg";
 
 import Button, { BUTTON_TYPE_CLASSES } from "../button/Button";
 
@@ -40,7 +40,8 @@ const HeroSection = () => {
   return (
     <div className="hero-section">
       <div
-        className={activeImg === 1 ? "slide gradient-bg active-slide" : "slide"}
+        className={activeImg === 1 ? "slide active-slide" : "slide"}
+        style={{ backgroundImage: `url(${banner3})` }}
         role="img"
         aria-label="apple support"
       >

@@ -16,7 +16,6 @@ const Slider = ({ slides, resSlides, data }) => {
   return (
     <Swiper
       spaceBetween={20}
-      loop={true}
       breakpoints={{
         1200: {
           slidesPerView: slides,
@@ -28,6 +27,7 @@ const Slider = ({ slides, resSlides, data }) => {
           slidesPerView: 2,
         },
       }}
+      loop
       autoplay={{
         delay: 4000,
         disableOnInteraction: false,

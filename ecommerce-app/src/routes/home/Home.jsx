@@ -8,6 +8,7 @@ import Perks from "../../components/perks/Perks";
 import Slider from "../../components/slider/Slider";
 import SectionHeader from "../../components/section-header/SectionHeader";
 import CategorySlider from "../../components/category-slider/CategorySlider";
+import Services from "../../components/home-section/Services";
 import air from "../../img/note_1.jpg";
 import iphoneImg from "../../img/phones/phone_2.jpg";
 
@@ -100,6 +101,7 @@ const Home = () => {
         </div>
         <Slider slides={3} resSlides={3} data={data} />
       </div>
+      <Services />
       <SectionHeader sectionTitle={"Categories"} />
       <CategorySlider />
     </div>
