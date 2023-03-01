@@ -1,5 +1,7 @@
 import ReviewDetails from "../review-details/ReviewDetails";
+import StarReview from "../star-review/StarReview";
 import Button from "../button/Button";
+import userIcon from "../../img/default-user.png";
 import "./review.css";
 
 function Review() {
@@ -11,7 +13,12 @@ function Review() {
     <div className="product-review">
       <ReviewDetails />
 
-      <form autoComplete="off" noValidate onSubmit={handleSubmit}>
+      <form
+        autoComplete="off"
+        noValidate
+        onSubmit={handleSubmit}
+        className="my-form"
+      >
         <div className="star-container">
           <h3>Your Rating: </h3>
           <div className="rate">
@@ -46,6 +53,40 @@ function Review() {
       </form>
       <div className="comment-section">
         <h3>REVIEWS</h3>
+        <div className="comments-section">
+          <div className="comment">
+            <div className="author">
+              <img src={userIcon} alt="avatar" />
+              <h4>John Almazan</h4>
+            </div>
+            <div className="author-rating">
+              <StarReview rating={5} />
+              <p>Reviewed January 13, 2023</p>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed
+              veritatis ipsa odio numquam atque adipisci, quam accusantium
+              deleniti, distinctio veniam ab, repellat libero. Eligendi minus
+              omnis odio delectus, harum veniam.
+            </p>
+          </div>
+          <div className="comment">
+            <div className="author">
+              <img src={userIcon} alt="avatar" />
+              <h4>John Almazan</h4>
+            </div>
+            <div className="author-rating">
+              <StarReview rating={4} />
+              <p>Reviewed January 13, 2023</p>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed
+              veritatis ipsa odio numquam atque adipisci, quam accusantium
+              deleniti, distinctio veniam ab, repellat libero. Eligendi minus
+              omnis odio delectus, harum veniam.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
