@@ -49,3 +49,25 @@ export const CartButton = styled(BaseButton)`
 `;
 
 export const HeroButton = styled(CartButton)``;
+
+export const DetailButton = styled(BaseButton)`
+  background: transparent;
+  color: var(--black);
+  margin: 0;
+  margin-right: 12px;
+  font-weight: 500;
+  border: 1px solid var(--gray-500);
+  border-bottom: none;
+
+  &:hover {
+    background: transparent;
+    border: 1px solid var(--gray-500);
+    border-bottom: none;
+  }
+
+  &.active-detail {
+    background-color: #fff200;
+    border: 1px solid #fff200;
+    border-bottom: none;
+  }
+`;

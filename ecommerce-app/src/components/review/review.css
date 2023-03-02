@@ -1,5 +1,6 @@
 .product-review {
   padding: 0 1rem;
+  min-height: 50vh;
 }
 
 .my-form {

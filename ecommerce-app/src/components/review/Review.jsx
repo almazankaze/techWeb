@@ -73,11 +73,11 @@ function Review() {
           <div className="comment">
             <div className="author">
               <img src={userIcon} alt="avatar" />
-              <h4>John Almazan</h4>
+              <h4>Bryan Alvarez</h4>
             </div>
             <div className="author-rating">
               <StarReview rating={4} />
-              <p>Reviewed January 13, 2023</p>
+              <p>Reviewed January 10, 2023</p>
             </div>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed
