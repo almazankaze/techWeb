@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 
 import { userReducer } from "./user/user-reducer";
-import { productReducer } from "./product/product-reducer.js";
+import { productReducer } from "./products/product-reducer.js";
 import { NavReducer } from "./navbar/navbar-reducer.js";
 import { cartReducer } from "./cart/cart-reducer";
 

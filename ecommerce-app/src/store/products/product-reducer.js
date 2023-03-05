@@ -15,6 +15,7 @@ export const productReducer = (state = PRODUCTS_INITIAL_STATE, action = {}) => {
         ...state,
         isLoading: true,
       };
+
     case PRODUCT_ACTIONS.FETCH_PRODUCTS_SUCCESS:
       return { ...state, isLoading: false, products: payload };
     case PRODUCT_ACTIONS.FETCH_PRODUCTS_FAILED:

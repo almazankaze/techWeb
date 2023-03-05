@@ -69,7 +69,7 @@ function Product() {
                   className="quantity-input-screen"
                   type="text"
                   value={quantity}
-                  readonly
+                  readOnly
                 />
                 <button
                   className="quantity-input-btn quantity-input-btn__right"
@@ -78,11 +78,13 @@ function Product() {
                   &#xff0b;
                 </button>
               </div>
-              <Button type="button" buttonType={BUTTON_TYPE_CLASSES.cart}>
-                Add to Cart
-              </Button>
-              <div className="product-favorite-btn">
-                <FavoriteBorderIcon />
+              <div className="quantity-buttons">
+                <Button type="button" buttonType={BUTTON_TYPE_CLASSES.cart}>
+                  Add to Cart
+                </Button>
+                <div className="product-favorite-btn">
+                  <FavoriteBorderIcon />
+                </div>
               </div>
             </div>
 

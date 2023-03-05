@@ -7,10 +7,12 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/Button";
 
+import tempImg from "../../img/note_1.jpg";
+
 import "./productcard.css";
 
 function ProductCard({ product }) {
-  const { name, desc, dPrice, oPrice, percentOff, rating, inStock, img } =
+  const { shortname, desc, dprice, oprice, percentOff, rating, inStock, img } =
     product;
 
   const dispatch = useDispatch();
@@ -21,7 +23,7 @@ function ProductCard({ product }) {
   return (
     <div className="card">
       <div className="card-image">
-        <img src={img} alt="product-img" />
+        <img src={tempImg} alt="product-img" />
         {percentOff ? (
           <div className="card-percent">{percentOff}% OFF</div>
         ) : (
@@ -44,12 +46,11 @@ function ProductCard({ product }) {
             {inStock ? "INSTOCK" : "SOLDOUT"}
           </div>
         </div>
-        <h5 className="overflow-text mb-small">{name}</h5>
-        <p className="card-desc overflow-text-2 mb-small">{desc}</p>
+        <h5 className="overflow-text mb-small">{shortname}</h5>
 
         <div className="card-price mb-small">
-          <h3>${dPrice ? dPrice : oPrice}</h3>
-          {dPrice ? <p className="original-price">${oPrice}</p> : ""}
+          <h3>${dprice ? dprice : oprice}</h3>
+          {dprice ? <p className="original-price">${oprice}</p> : ""}
         </div>
         <Button
           type="button"

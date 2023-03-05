@@ -11,23 +11,16 @@ import Cart from "./routes/cart/Cart";
 import Account from "./routes/settings/Account";
 import Product from "./routes/product/Product";
 
-import SHOP_DATA from "./shop-data";
-
 import { setCurrentUser } from "./store/user/user-actions";
 import {
   onAuthStateChangedListener,
   createUserDoc,
-  addCollectionAndDocuments,
 } from "./utils/firebase/firebase";
 
 import "./App.css";
 
 function App() {
   const dispatch = useDispatch();
-
-  /* useEffect(() => {
-    addCollectionAndDocuments("storeItems", SHOP_DATA);
-  }, []); */
 
   useEffect(() => {
     const unsubscribe = onAuthStateChangedListener((user) => {

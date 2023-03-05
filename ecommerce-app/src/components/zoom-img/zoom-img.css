@@ -12,3 +12,15 @@ img {
   width: 100%;
   pointer-events: none;
 }
+
+@media (max-width: 600px) {
+  figure {
+    width: 300px;
+  }
+}
+
+@media (max-width: 360px) {
+  figure {
+    width: 200px;
+  }
+}

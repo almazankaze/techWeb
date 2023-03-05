@@ -1,7 +1,16 @@
-//import { useEffect } from "react";
-//import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
-//import { fetchProductsStartAsync } from "../../store/product/product-actions";
+//import SHOP_DATA from "../../shop-data";
+
+//import { addCollectionAndDocuments } from "../../utils/firebase/firebase";
+import { fetchProductsStartAsync } from "../../store/products/product-actions";
+import {
+  selectProductsMap,
+  selectIsLoading,
+} from "../../store/products/product-selector";
+
 import Button, { BUTTON_TYPE_CLASSES } from "../../components/button/Button";
 import HeroSection from "../../components/hero-section/HeroSection";
 import Perks from "../../components/perks/Perks";
@@ -13,14 +22,15 @@ import air from "../../img/note_1.jpg";
 import iphoneImg from "../../img/phones/phone_2.jpg";
 
 import "./home.css";
+import Spinner from "../../components/spinner/Spinner";
 
 const product = {
   id: 1,
-  name: "AppleMacbook Air 13",
+  shortname: "AppleMacbook Air 13",
   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
   img: air,
-  dPrice: "1725.00",
-  oPrice: "2300.00",
+  dprice: "1725.00",
+  oprice: "2300.00",
   percentOff: 25,
   rating: 4,
   inStock: true,
@@ -28,11 +38,11 @@ const product = {
 
 const iphone = {
   id: 2,
-  name: "iPhone 12 mini",
+  shortname: "iPhone 12 mini",
   desc: "description",
   img: iphoneImg,
-  dPrice: "",
-  oPrice: "699.99",
+  dprice: "",
+  oprice: "699.99",
   percentOff: "",
   rating: 5,
   inStock: false,
@@ -40,11 +50,11 @@ const iphone = {
 
 const product2 = {
   id: 3,
-  name: "AppleMacbook Air 13",
+  shortname: "AppleMacbook Air 13",
   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
   img: air,
-  dPrice: "1725.00",
-  oPrice: "2300.00",
+  dprice: "1725.00",
+  oprice: "2300.00",
   percentOff: 25,
   rating: 4,
   inStock: true,
@@ -52,11 +62,11 @@ const product2 = {
 
 const iphone2 = {
   id: 4,
-  name: "iPhone 12 mini",
+  shortname: "iPhone 12 mini",
   desc: "description",
   img: iphoneImg,
-  dPrice: "",
-  oPrice: "699.99",
+  dprice: "",
+  oprice: "699.99",
   percentOff: "",
   rating: 5,
   inStock: false,
@@ -65,18 +75,29 @@ const iphone2 = {
 const data = [product, iphone, product2, iphone2];
 
 const Home = () => {
-  //const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  const offers = useSelector(selectProductsMap);
+  const isLoading = useSelector(selectIsLoading);
 
-  /* useEffect(() => {
+  /*useEffect(() => {
+    addCollectionAndDocuments("storeItems", SHOP_DATA);
+  }, []); */
+
+  useEffect(() => {
     dispatch(fetchProductsStartAsync());
-  }, [dispatch]); */
+  }, [dispatch]);
 
   return (
     <div className="home container">
       <HeroSection />
       <Perks />
       <SectionHeader sectionTitle={"Offers"} />
-      <Slider slides={4} resSlides={3} data={data} />
+
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <Slider slides={4} resSlides={3} data={offers} />
+      )}
 
       <div className="home-img-section">
         <div className="img-wrapper" id="graphics"></div>
