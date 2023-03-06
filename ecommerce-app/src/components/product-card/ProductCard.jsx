@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-
+import { Link } from "react-router-dom";
 import { selectCartItems } from "../../store/cart/cart-selector";
 import { addItemToCart } from "../../store/cart/cart-actions";
 import StarReview from "../star-review/StarReview";
@@ -12,10 +12,20 @@ import tempImg from "../../img/note_1.jpg";
 import "./productcard.css";
 
 function ProductCard({ product }) {
-  const { shortname, desc, dprice, oprice, percentOff, rating, inStock, img } =
-    product;
+  const {
+    id,
+    shortname,
+    desc,
+    dprice,
+    oprice,
+    percentOff,
+    rating,
+    inStock,
+    img,
+  } = product;
 
   const dispatch = useDispatch();
+
   const cartItems = useSelector(selectCartItems);
 
   const addProductToCart = () => dispatch(addItemToCart(cartItems, product));
@@ -23,7 +33,9 @@ function ProductCard({ product }) {
   return (
     <div className="card">
       <div className="card-image">
-        <img src={tempImg} alt="product-img" />
+        <Link to={`product/${id}`}>
+          <img src={tempImg} alt="product-img" />
+        </Link>
         {percentOff ? (
           <div className="card-percent">{percentOff}% OFF</div>
         ) : (

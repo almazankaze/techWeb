@@ -20,6 +20,7 @@ import {
   query,
   getDocs,
   where,
+  limit,
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -63,6 +64,14 @@ export const addCollectionAndDocuments = async (
 export const getProductsAndDocuments = async () => {
   const collectionRef = collection(db, "storeItems");
   const q = query(collectionRef);
+
+  const querySnapshot = await getDocs(q);
+  return querySnapshot.docs.map((doc) => doc.data());
+};
+
+export const getProductAndDocument = async (id) => {
+  const docRef = collection(db, "storeItems");
+  const q = query(docRef, limit(1), where("id", "==", id));
 
   const querySnapshot = await getDocs(q);
   return querySnapshot.docs.map((doc) => doc.data());

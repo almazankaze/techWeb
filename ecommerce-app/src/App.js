@@ -49,7 +49,7 @@ function App() {
           />
           <Route path="cart" element={<Cart />} />
           <Route path="account" element={<Account />} />
-          <Route path="product" element={<Product />} />
+          <Route path="product/:id" element={<Product />} />
           <Route path="*" element={<Navigate to="/notfound" />} />
           <Route path="notfound" element={<NotFound />} />
         </Route>

@@ -23,7 +23,7 @@ const Slider = ({ slides, resSlides, data }) => {
         850: {
           slidesPerView: resSlides,
         },
-        480: {
+        530: {
           slidesPerView: 2,
         },
       }}
