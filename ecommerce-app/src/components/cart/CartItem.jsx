@@ -10,7 +10,7 @@ import { selectCartItems } from "../../store/cart/cart-selector";
 import "./cart.scss";
 
 const CartItem = ({ cartItem }) => {
-  const { name, img, oPrice, dPrice, quantity } = cartItem;
+  const { shortname, img, oprice, dprice, quantity } = cartItem;
   const dispatch = useDispatch();
   const cartItems = useSelector(selectCartItems);
 
@@ -23,10 +23,10 @@ const CartItem = ({ cartItem }) => {
   return (
     <div className="cart-item-container">
       <div className="image-container">
-        <img src={img} alt={name} />
-        <span className="name"> {name} </span>
+        <img src={img} alt={shortname} />
+        <span className="name"> {shortname} </span>
       </div>
-      <span className="price">${dPrice ? dPrice : oPrice}</span>
+      <span className="price">${dprice ? dprice : oprice}</span>
       <span className="quantity">
         <div className="arrow" onClick={removeItemHandler}>
           &#10094;

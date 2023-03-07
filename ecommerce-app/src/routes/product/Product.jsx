@@ -6,6 +6,8 @@ import {
   selectProductMap,
   selectIsLoading,
 } from "../../store/singleProduct/product-selector";
+import { selectCartItems } from "../../store/cart/cart-selector";
+import { addItemToCart } from "../../store/cart/cart-actions";
 import Review from "../../components/review/Review";
 import ImageZoom from "../../components/zoom-img/ImageZoom";
 import StarReview from "../../components/star-review/StarReview";
@@ -19,6 +21,8 @@ import "./product.css";
 function Product() {
   const { id } = useParams();
   const dispatch = useDispatch();
+
+  const cartItems = useSelector(selectCartItems);
 
   const [detailsBtn, setDetailsBtn] = useState(true);
   const [reviewBtn, setReviewBtn] = useState(false);
@@ -50,8 +54,18 @@ function Product() {
     setQuantity(quantity > 0 ? quantity - 1 : 0);
   };
 
+  const addProductToCart = () => {
+    if (quantity <= 0) return;
+    dispatch(addItemToCart(cartItems, singleProduct[0], quantity));
+    setQuantity(0);
+  };
+
   const singleProduct = useSelector(selectProductMap);
   const isLoading = useSelector(selectIsLoading);
+
+  if (singleProduct.length <= 0) {
+    return null;
+  }
 
   return (
     <div className="container">
@@ -116,7 +130,11 @@ function Product() {
                   </button>
                 </div>
                 <div className="quantity-buttons">
-                  <Button type="button" buttonType={BUTTON_TYPE_CLASSES.cart}>
+                  <Button
+                    type="button"
+                    buttonType={BUTTON_TYPE_CLASSES.cart}
+                    onClick={addProductToCart}
+                  >
                     Add to Cart
                   </Button>
                   <div className="product-favorite-btn">

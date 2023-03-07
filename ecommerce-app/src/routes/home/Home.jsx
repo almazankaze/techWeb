@@ -10,6 +10,11 @@ import {
   selectProductsMap,
   selectIsLoading,
 } from "../../store/products/product-selector";
+import { fetchFeaturedStartAsync } from "../../store/featured/featured-actions";
+import {
+  selectFeaturedMap,
+  featuredIsLoading,
+} from "../../store/featured/featured-selector";
 
 import Button, { BUTTON_TYPE_CLASSES } from "../../components/button/Button";
 import HeroSection from "../../components/hero-section/HeroSection";
@@ -78,6 +83,8 @@ const Home = () => {
   const dispatch = useDispatch();
   const offers = useSelector(selectProductsMap);
   const isLoading = useSelector(selectIsLoading);
+  const featured = useSelector(selectFeaturedMap);
+  const featuredLoading = useSelector(featuredIsLoading);
 
   /*useEffect(() => {
     addCollectionAndDocuments("storeItems", SHOP_DATA);
@@ -85,6 +92,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(fetchProductsStartAsync());
+    dispatch(fetchFeaturedStartAsync());
   }, [dispatch]);
 
   return (
@@ -120,7 +128,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <Slider slides={3} resSlides={3} data={data} />
+        {featuredLoading ? (
+          <Spinner />
+        ) : (
+          <Slider slides={3} resSlides={3} data={featured} />
+        )}
       </div>
       <Services />
       <SectionHeader sectionTitle={"Categories"} />

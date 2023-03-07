@@ -58,9 +58,14 @@ const AuthForm = () => {
         return;
       }
 
-      if (password.length <= 5) {
-        setPasswordError("Password should be at least 6 characters");
-        return;
+      let strongPassword = new RegExp(
+        "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})"
+      );
+
+      if (!strongPassword.test(password)) {
+        setPasswordError(
+          "Password should have at least one lowercase letter, one uppercase letter, one digit, one special character, and is at least eight characters long."
+        );
       }
 
       if (password !== confirmPassword) {

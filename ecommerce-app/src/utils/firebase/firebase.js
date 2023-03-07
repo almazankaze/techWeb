@@ -85,6 +85,14 @@ export const getOffersAndDocuments = async () => {
   return querySnapshot.docs.map((doc) => doc.data());
 };
 
+export const getFeaturedAndDocuments = async () => {
+  const collectionRef = collection(db, "storeItems");
+  const q = query(collectionRef, where("home", "==", "laptop"));
+
+  const querySnapshot = await getDocs(q);
+  return querySnapshot.docs.map((doc) => doc.data());
+};
+
 export const createUserDoc = async (userAuth, additionalInfo = {}) => {
   if (!userAuth) return;
 

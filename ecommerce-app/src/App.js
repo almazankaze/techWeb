@@ -10,6 +10,7 @@ import NotFound from "./routes/errors/NotFound";
 import Cart from "./routes/cart/Cart";
 import Account from "./routes/settings/Account";
 import Product from "./routes/product/Product";
+import ScrollToTop from "./components/scroll/ScrollToTop";
 
 import { setCurrentUser } from "./store/user/user-actions";
 import {
@@ -36,24 +37,26 @@ function App() {
 
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<Navigation />}>
-          <Route index element={<Home />} />
-          <Route
-            path="auth"
-            element={
-              <NavigateAuth>
-                <Authentication />
-              </NavigateAuth>
-            }
-          />
-          <Route path="cart" element={<Cart />} />
-          <Route path="account" element={<Account />} />
-          <Route path="product/:id" element={<Product />} />
-          <Route path="*" element={<Navigate to="/notfound" />} />
-          <Route path="notfound" element={<NotFound />} />
-        </Route>
-      </Routes>
+      <ScrollToTop>
+        <Routes>
+          <Route path="/" element={<Navigation />}>
+            <Route index element={<Home />} />
+            <Route
+              path="auth"
+              element={
+                <NavigateAuth>
+                  <Authentication />
+                </NavigateAuth>
+              }
+            />
+            <Route path="cart" element={<Cart />} />
+            <Route path="account" element={<Account />} />
+            <Route path="product/:id" element={<Product />} />
+            <Route path="*" element={<Navigate to="/notfound" />} />
+            <Route path="notfound" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </ScrollToTop>
       <Footer />
     </div>
   );
