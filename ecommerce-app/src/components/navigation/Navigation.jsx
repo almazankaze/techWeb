@@ -64,7 +64,7 @@ const Navigation = () => {
           <div className="navbar-top-right">
             <div className="icon-container">
               <FavoriteBorderIcon className="navbar-icon" />
-              <span className="badge"> 9 </span>
+              <span className="badge"> 0 </span>
             </div>
 
             <div className="icon-container" onClick={goToCartHandler}>

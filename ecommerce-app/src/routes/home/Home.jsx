@@ -23,61 +23,9 @@ import Slider from "../../components/slider/Slider";
 import SectionHeader from "../../components/section-header/SectionHeader";
 import CategorySlider from "../../components/category-slider/CategorySlider";
 import Services from "../../components/home-section/Services";
-import air from "../../img/note_1.jpg";
-import iphoneImg from "../../img/phones/phone_2.jpg";
-
-import "./home.css";
 import Spinner from "../../components/spinner/Spinner";
 
-const product = {
-  id: 1,
-  shortname: "AppleMacbook Air 13",
-  desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
-  img: air,
-  dprice: "1725.00",
-  oprice: "2300.00",
-  percentOff: 25,
-  rating: 4,
-  inStock: true,
-};
-
-const iphone = {
-  id: 2,
-  shortname: "iPhone 12 mini",
-  desc: "description",
-  img: iphoneImg,
-  dprice: "",
-  oprice: "699.99",
-  percentOff: "",
-  rating: 5,
-  inStock: false,
-};
-
-const product2 = {
-  id: 3,
-  shortname: "AppleMacbook Air 13",
-  desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque culpa, odio, qui praesentium dignissimos eaque dolorum porro alias neque, eius animi ipsa voluptates. Optio repellat tempora voluptas, dolores ipsam ad!",
-  img: air,
-  dprice: "1725.00",
-  oprice: "2300.00",
-  percentOff: 25,
-  rating: 4,
-  inStock: true,
-};
-
-const iphone2 = {
-  id: 4,
-  shortname: "iPhone 12 mini",
-  desc: "description",
-  img: iphoneImg,
-  dprice: "",
-  oprice: "699.99",
-  percentOff: "",
-  rating: 5,
-  inStock: false,
-};
-
-const data = [product, iphone, product2, iphone2];
+import "./home.css";
 
 const Home = () => {
   const dispatch = useDispatch();

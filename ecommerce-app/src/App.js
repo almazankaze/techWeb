@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { selectIsMenuOpen } from "./store/navbar/navbar-selector";
 import Navigation from "./components/navigation/Navigation";
 import NavigateAuth from "./routes/authentication/NavigateAuth";
 import Home from "./routes/home/Home";
@@ -22,6 +23,7 @@ import "./App.css";
 
 function App() {
   const dispatch = useDispatch();
+  const isMenuOpen = useSelector(selectIsMenuOpen);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChangedListener((user) => {
@@ -57,6 +59,7 @@ function App() {
           </Route>
         </Routes>
       </ScrollToTop>
+      <div className={isMenuOpen ? "nav-open-background" : ""}></div>
       <Footer />
     </div>
   );

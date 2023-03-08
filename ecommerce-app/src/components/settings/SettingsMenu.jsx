@@ -1,3 +1,5 @@
+import { useSelector } from "react-redux";
+import { selectCurrentUser } from "../../store/user/user-selector";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import ReceiptLongOutlinedIcon from "@mui/icons-material/ReceiptLongOutlined";
@@ -12,15 +14,17 @@ import "./settings.css";
 
 const SettingsMenu = () => {
   const navigate = useNavigate();
+  const currentUser = useSelector(selectCurrentUser);
 
   const signMeOut = async () => {
     await signOutUser();
     navigate("/auth");
   };
+
   return (
     <div className="settings-menu">
       <div className="settings-user-info">
-        <h3>John Almazan</h3>
+        <h3>{currentUser.displayName}</h3>
       </div>
       <ul className="settings-menu-buttons">
         <li className="menu-button active">

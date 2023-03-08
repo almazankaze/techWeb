@@ -102,6 +102,7 @@
 
   .mobile-nav-top-right {
     display: flex;
+    z-index: 900;
   }
 
   .mobile-navsearch-show {

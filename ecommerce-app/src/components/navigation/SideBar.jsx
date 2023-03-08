@@ -40,35 +40,55 @@ const SideBar = () => {
       </div>
       <ul className="sidebar-menu">
         <li>
-          <Link className="side-link sidebar-item" to="/">
+          <Link
+            className="side-link sidebar-item"
+            to="/"
+            onClick={toggleIsMenuOpen}
+          >
             <HomeOutlinedIcon className="sidebar-icon" /> Home
           </Link>
         </li>
         {currentUser ? (
           <li>
-            <Link className="side-link sidebar-item" to="/account">
+            <Link
+              className="side-link sidebar-item"
+              to="/account"
+              onClick={toggleIsMenuOpen}
+            >
               <PermIdentityOutlinedIcon className="sidebar-icon" />{" "}
               {currentUser.displayName}
             </Link>
           </li>
         ) : (
           <li>
-            <Link className="side-link sidebar-item" to="/">
+            <Link
+              className="side-link sidebar-item"
+              to="/auth"
+              onClick={toggleIsMenuOpen}
+            >
               <PermIdentityOutlinedIcon className="sidebar-icon" /> Sign In
             </Link>
           </li>
         )}
         <li>
           <div className="align-items">
-            <Link className="side-link sidebar-item" to="/">
+            <Link
+              className="side-link sidebar-item"
+              to="/"
+              onClick={toggleIsMenuOpen}
+            >
               <FavoriteBorderOutlinedIcon className="sidebar-icon" /> Wishlist
             </Link>
-            <div className="side-badge">9+</div>
+            <div className="side-badge">0</div>
           </div>
         </li>
         <li>
           <div className="align-items">
-            <Link className="side-link sidebar-item" to="/">
+            <Link
+              className="side-link sidebar-item"
+              to="/cart"
+              onClick={toggleIsMenuOpen}
+            >
               <ShoppingCartOutlinedIcon className="sidebar-icon" /> Shopping
               Cart
             </Link>
@@ -121,7 +141,7 @@ const SideBar = () => {
           onClick={() => setShowComputers(!showComputers)}
         >
           <div className="align-items">
-            <div className="side-link sidebar-item" to="/home">
+            <div className="side-link sidebar-item">
               <ComputerOutlinedIcon className="sidebar-icon" /> Computers
             </div>
             <ArrowDropDownOutlinedIcon className="fill-main-color" />
@@ -134,27 +154,47 @@ const SideBar = () => {
         </li>
 
         <li>
-          <Link className="side-link sidebar-item" to="/">
+          <Link
+            className="side-link sidebar-item"
+            to="/"
+            onClick={toggleIsMenuOpen}
+          >
             <MonitorOutlinedIcon className="sidebar-icon" /> Monitors
           </Link>
         </li>
         <li>
-          <Link className="side-link sidebar-item" to="/about">
+          <Link
+            className="side-link sidebar-item"
+            to="/"
+            onClick={toggleIsMenuOpen}
+          >
             <PrintOutlinedIcon className="sidebar-icon" /> Printers
           </Link>
         </li>
         <li>
-          <Link className="side-link sidebar-item" to="/">
+          <Link
+            className="side-link sidebar-item"
+            to="/"
+            onClick={toggleIsMenuOpen}
+          >
             <SmartphoneOutlinedIcon className="sidebar-icon" /> Smartphones
           </Link>
         </li>
         <li>
-          <Link className="side-link sidebar-item" to="/">
+          <Link
+            className="side-link sidebar-item"
+            to="/"
+            onClick={toggleIsMenuOpen}
+          >
             <HelpOutlineOutlinedIcon className="sidebar-icon" /> FAQ's
           </Link>
         </li>
         <li>
-          <Link className="side-link sidebar-item" to="/">
+          <Link
+            className="side-link sidebar-item"
+            to="/"
+            onClick={toggleIsMenuOpen}
+          >
             <PhoneOutlinedIcon className="sidebar-icon" /> Contact Us
           </Link>
         </li>
