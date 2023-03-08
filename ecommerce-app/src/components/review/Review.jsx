@@ -1,3 +1,5 @@
+import { useSelector } from "react-redux";
+import { selectCurrentUser } from "../../store/user/user-selector";
 import ReviewDetails from "../review-details/ReviewDetails";
 import StarReview from "../star-review/StarReview";
 import Button from "../button/Button";
@@ -5,6 +7,9 @@ import userIcon from "../../img/default-user.png";
 import "./review.css";
 
 function Review() {
+  
+  const currentUser = useSelector(selectCurrentUser);
+  
   const handleSubmit = (e) => {
     e.preventDefault();
   };
