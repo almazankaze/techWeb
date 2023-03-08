@@ -92,6 +92,13 @@
 }
 
 @media (max-width: 1250px) {
+  .navbar {
+    overflow: hidden;
+    position: fixed;
+    z-index: 900;
+    top: 0;
+  }
+
   .navbar-top-middle {
     display: none;
   }

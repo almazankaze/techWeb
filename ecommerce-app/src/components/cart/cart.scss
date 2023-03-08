@@ -93,3 +93,24 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media (max-width: 768px) {
+  .cart-container {
+    .cart-header {
+      display: none;
+    }
+  }
+
+  .cart-item-container {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+
+    .image-container {
+      flex-direction: column;
+
+      .name {
+        margin-top: 8px;
+      }
+    }
+  }
+}

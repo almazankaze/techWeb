@@ -65,7 +65,7 @@
 @media (max-width: 1250px) {
   .sidebar {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: var(--white);
